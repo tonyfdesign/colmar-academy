@@ -1,0 +1,714 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/*  Colmar Academy
+/*   v1.0
+/*   Tony Fletcher, tony@tonyfletcher.com
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Universal page styles
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 18px;
+    line-height: 1.5em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Main links
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+a:link {
+    /* unvisited link */
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: .9em
+}
+
+a:visited {
+    /* visited link */
+    color: #4a90e2;
+}
+
+a:hover {
+    /* mouse over link */
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+a:active {
+    /* selected link */
+    color: #4a90e2;
+}
+
+#container {}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Navigation Bar
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (min-width: 601px) {
+
+    #nav {
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        height: 64px;
+        box-shadow: 0px 1px 8px rgba(107, 107, 107, 0.5);
+        top: 0px;
+    }
+
+    #logo {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        vertical-align: middle;
+        margin-left: 24px;
+        margin-top: 12px;
+        height: 42px;
+    }
+
+    #logo img {
+        height: 40px;
+    }
+
+    #logo h1 {
+        font-family: 'Lato', sans-serif;
+        line-height: normal;
+        font-size: 1.2em;
+        font-weight: 700;
+        color: #4a4a4a;
+        display: inline;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    #logo h1 span {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: #cecece;
+    }
+
+    .navigation {
+        margin-top: 16px;
+        margin-right: 24px;
+        height: 32px;
+    }
+
+    .mobile-navigation {
+        display: none;
+    }
+
+    #logo a {
+        padding-left: 0px;
+    }
+
+    #nav .navigation a {
+        color: black;
+    }
+
+    #nav .navigation ul li {
+        font-size: .9em;
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 8px;
+    }
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Navigation Bar - mobile
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (max-width: 600px) {
+
+    .navigation,
+    #logo {
+        display: none;
+    }
+
+    #nav {
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        height: 64px;
+        box-shadow: 0px 1px 8px rgba(107, 107, 107, 0.5);
+        top: 0px;
+    }
+
+    .mobile-navigation {}
+
+    .mobile-navigation ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile-navigation li {
+        padding: 15px 20px 0px 20px;
+        margin: 3px 00px 0px 0px;
+    }
+
+    .mobile-navigation img {
+        width: 32px;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Header
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+header {
+    background-color: #d8d8d8;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 64px;
+}
+
+#banner-img {
+    padding: 32px 24px;
+    width: 60%;
+}
+
+#banner-headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+#banner-headline h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    color: #4a4a4a;
+    font-size: 3em;
+    line-height: .8em;
+}
+
+#banner-headline h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #4a4a4a;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-top: 20px;
+}
+
+.button {
+    background: #4a90e2;
+    width: 50%;
+    padding: 8px 0;
+    margin-top: 20px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background: #999;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\f164';
+    font-family: FontAwesome;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+    font-family: FontAwesome;
+    */
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Banner - mobile
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (max-width: 600px) {
+
+    header {
+        background-color: #d8d8d8;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #banner-img {
+        padding: 32px 24px;
+        width: 100%;
+    }
+
+    #banner-headline {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Features
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (min-width: 601px) {
+
+    #features {
+        background-color: #f3f5f5;
+        display: flex;
+    }
+
+    #features-headline {
+        padding: 32px 24px;
+        width: 60%;
+        border-right: 1px solid #d8d8d8;
+    }
+
+    #features-headline h1 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        color: #4a4a4a;
+        font-size: 2em;
+        line-height: .8em;
+        padding: 32px 0px 24px 0px;
+    }
+    #features-headline h3 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: #6d6d6d;
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    #features-headline h4 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: #4a4a4a;
+        font-size: .8em;
+        line-height: 1em;
+        margin-top: 20px;
+        margin-bottom: 32px;
+    }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Features - sidebar
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    
+    #features-sidebar {
+        width: 40%;
+    }
+    
+    #features-sidebar .mobile {
+        display: none;
+    }
+
+    #features-sidebar .sidebar:first-child {
+        border-bottom: 1px solid #d8d8d8;
+        margin-top: 24px;
+        min-height: 150px;
+    }
+ 
+    #features-sidebar .sidebar:hover {
+        background-color: #d8d8d8;
+    }
+
+    #features-sidebar .sidebar {
+        border-bottom: 1px solid #d8d8d8;
+        min-height: 150px;
+    }
+    
+    #features-sidebar .sidebar:last-child {
+        border-bottom: none;
+    }
+
+    #features-sidebar .sidebar img {
+        width: 150px;
+        padding: 10px 10px 10px 10px;
+        float: left;
+    }
+
+    #features-sidebar .sidebar h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 1.2em;
+        float: none;
+        padding: 10px 0px;
+    }
+
+    #features-sidebar .sidebar p {
+        color: #6d6d6d;
+        font-size: .8em;
+        line-height: 1em;
+        padding-bottom: 10px;
+    }
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Features - mobile
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (max-width: 600px) {
+
+    #features-headline {
+        display: none;
+    }
+
+    #features-sidebar {}
+
+    #features-sidebar .sidebar .desktop {
+        display: none;
+    }
+
+    #features-sidebar .sidebar .mobile {
+        max-width: 100%;
+        height: auto;
+        padding: 24px
+    }
+
+    #features-sidebar .sidebar:hover {
+        background-color: #d8d8d8;
+    }
+
+    #features-sidebar .sidebar h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 1.2em;
+        float: none;
+        padding-left: 24px;
+    }
+
+    #features-sidebar .sidebar p {
+        color: #6d6d6d;
+        font-size: .8em;
+        line-height: 1.2em;
+        padding-top: 6px;
+        padding-left: 24px;
+    }
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Classes
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (min-width: 601px) {
+
+    #classes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #eaebec;
+        padding: 0px 72px 0px 72px;
+    }
+
+    #mobile-classes {
+        display: none;
+    }
+
+    #classes h1 {
+        text-align: center;
+        flex-basis: 100%;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        color: #4a4a4a;
+        font-size: 2em;
+        line-height: .8em;
+        padding: 32px 0px 24px 0px;
+    }
+
+    .class-description {
+        background-color: white;
+        margin: 16px;
+        width: calc(100% * (1/4) - 10px - 1px)
+    }
+
+    .class-description h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        color: #4a4a4a;
+        font-size: 1.2em;
+        line-height: 1.0em;
+        padding: 16px;
+    }
+
+    .class-description h3 {
+        font-family: 'Lato', sans-serif;
+        color: #6d6d6d;
+        font-size: 1em;
+        line-height: .8em;
+        padding: 8px 16px 8px 16px;
+    }
+
+    .class-description p {
+        font-family: 'Lato', sans-serif;
+        color: #6d6d6d;
+        font-size: .8em;
+        line-height: 1.2em;
+        padding: 8px 16px 32px 16px;
+    }
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Classes - mobile
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (max-width: 600px) {
+
+    #classes {
+        display: none;
+    }
+
+    #mobile-classes h1 {
+        text-align: center;
+        flex-basis: 100%;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        color: #4a4a4a;
+        font-size: 2em;
+        line-height: .8em;
+        padding: 32px 0px 24px 0px;
+    }
+
+    #mobile-classes h2 {
+        font-family: 'Lato', sans-serif;
+        color: #4a4a4a;
+        background-color: #d8d8d8;
+        font-weight: 600;
+        padding: 30px 16px;
+        margin: 5px 10px;
+        font-size: 24px;
+    }
+    
+    #mobile-classes h2:hover {
+        font-family: 'Lato', sans-serif;
+        color: white;
+        background-color: #4a90e2;
+        font-weight: 600;
+        padding: 30px 16px;
+        margin: 5px 10px;
+        font-size: 24px;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Thesis Area
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (min-width: 601px) {
+
+    #thesis {
+        background-color: #f3f5f5;
+    }
+
+    #thesis-wrap {
+        display: flex;
+    }
+
+    #thesis h1 {
+        text-align: center;
+        flex-basis: 100%;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        color: #4a4a4a;
+        font-size: 2em;
+        line-height: .8em;
+        padding: 32px 0px 24px 0px;
+    }
+
+    #thesis-headline {
+        padding: 32px 24px;
+        width: 60%;
+    }
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Thesis - sidebar
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    
+    #thesis-sidebar {
+        width: 40%;
+    }
+
+    #thesis-headline h1 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        color: #4a4a4a;
+        font-size: 2em;
+        line-height: .8em;
+        padding: 32px 0px 24px 0px;
+    }
+
+    #thesis-headline h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        color: #4a4a4a;
+        font-size: 2em;
+        line-height: .8em;
+        padding: 32px 0px 24px 0px;
+    }
+
+    #thesis-headline h3 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: #6d6d6d;
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    #thesis-sidebar .sidebar:first-child {
+        border-bottom: 1px solid #d8d8d8;
+        margin-top: 24px;
+        min-height: 150px;
+    }
+    
+     #thesis-sidebar .sidebar:last-child {
+        border-bottom: none;
+    }
+
+
+    #thesis-sidebar .sidebar {
+        border-bottom: 1px solid #d8d8d8;
+        min-height: 150px;
+    }
+
+    #thesis-sidebar .sidebar img {
+        width: 140px;
+        padding: 10px 10px 10px 0px;
+        float: left;
+    }
+
+    #thesis-sidebar .sidebar h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 1.2em;
+        float: none;
+        padding: 10px 0px;
+    }
+
+    #thesis-sidebar .sidebar p {
+        color: #6d6d6d;
+        font-size: .8em;
+        line-height: 1.2em;
+        padding-bottom: 10px;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Thesis - mobile styles
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (max-width: 600px) {
+
+    #thesis-sidebar {
+        display: none;
+    }
+
+    #thesis h1 {
+        text-align: center;
+        flex-basis: 100%;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        color: #4a4a4a;
+        font-size: 2em;
+        line-height: .8em;
+        padding: 32px 0px 24px 0px;
+    }
+
+    #thesis-headline h2,
+    #thesis-headline h3 {
+        display: none;
+    }
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Footer
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (min-width: 601px) {
+
+    #footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: #feffff;
+        color: #bababa;
+        font-size: .8em;
+        padding: 24px;
+        border-top: 1px #4a4a4a solid;
+    }
+
+    #footer a {
+        color: #bababa;
+    }
+
+    #footer ul li {
+        color: #bababa;
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle;
+        padding-right: 8px;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* Footer - mobile styles
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media only screen and (max-width: 600px) {
+
+    #footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: #feffff;
+        color: #bababa;
+        font-size: .7em;
+        padding: 24px;
+    }
+
+    #footer ul li {
+        display: none;
+    }
+
+}
